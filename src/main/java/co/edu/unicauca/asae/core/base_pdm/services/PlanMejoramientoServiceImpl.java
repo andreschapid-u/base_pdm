@@ -21,24 +21,13 @@ public class PlanMejoramientoServiceImpl implements IPlanMejoramiento {
     @Override
     @Transactional(readOnly = true)
     public List<PlanMejoramiento> findAll() {
-        // TODO Auto-generated method stub
-        return null;
+        return servicioAccesoBDPLanM.findAll();
     }
 
     @Override
     @Transactional
     public PlanMejoramiento save(PlanMejoramiento plan) {
-        // TODO Auto-generated method stub
-        System.out.println("llego");
-        PlanMejoramiento pResult = null;
-        try {
-            pResult =  this.servicioAccesoBDPLanM.save(plan);
-            
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
-        return pResult;
+        return servicioAccesoBDPLanM.save(plan);
     }
-
     
 }

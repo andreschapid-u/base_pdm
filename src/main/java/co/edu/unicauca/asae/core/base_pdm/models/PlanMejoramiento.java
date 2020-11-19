@@ -17,6 +17,7 @@ import javax.persistence.TemporalType;
 public class PlanMejoramiento {
 
     @Id
+    @Column(name="id_plan_mejoramiento")
     private String idPlanMejoramiento;
 
     @Column(name="nombre_plan")
@@ -27,15 +28,14 @@ public class PlanMejoramiento {
     private Date fechaFin;
     @Column(name="path_soporte")
     private String pathSoporte;
-    @Column(name="prorroga")
+    @Column(name="prorrogado")
     private boolean prorroga;
     @Column(name="estado_plan")
     private String estado;
 
-    @Column(name="create_at")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createAt;
-
+    // @Column(name="create_at")
+    // @Temporal(TemporalType.TIMESTAMP)
+    // private Date createAt;
 
     public String getIdPlanMejoramiento() {
         return idPlanMejoramiento;
